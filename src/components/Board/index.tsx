@@ -23,8 +23,8 @@ export function Board() {
       <div>
         <h1>ADVICE # {advice.id}</h1>
         <p>{advice.advice}</p>
-        <span><hr className="horizontal" /><hr className="vertical" /><hr className="vertical" /><hr className="horizontal" /></span>
-        <button>
+        <span><hr className="horizontal" /><hr className="vertical" /><span className="space"></span><hr className="vertical" /><hr className="horizontal" /></span>
+        <button onClick={fetchAdvice} >
           <img src={dice} alt="" />
         </button>
       </div>

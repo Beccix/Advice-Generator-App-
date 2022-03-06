@@ -14,7 +14,7 @@ export const Container = styled.div`
     flex-direction: column;
     background-color: var(--Grayish-Blue);
     border-radius: .5rem;
-    width: 90%;
+    width: 80%;
     height: 19.6rem;
     padding: 0 1.7rem 0 1.7rem;
   }
@@ -26,6 +26,7 @@ export const Container = styled.div`
   }
 
   p {
+    min-width: 17rem;
     text-align: center;
     height: 10.7rem;
     font-size: 1.5rem;
@@ -35,13 +36,15 @@ export const Container = styled.div`
 
   span {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding-top: 2rem;
     width: 100%;
     height: 100%;
   }
 
   .horizontal:first-of-type {
+    transform:translateX(-1rem);
     opacity: .2;
     height: .1rem;
     width: 40%;
@@ -49,6 +52,7 @@ export const Container = styled.div`
   }
 
   .horizontal:last-of-type {
+    transform:translateX(1rem);
     opacity: .2;
     height: .1rem;
     width: 40%;
@@ -56,12 +60,15 @@ export const Container = styled.div`
   }
 
   .vertical {
-    transform: translateY(-50%);
     background-color: var(--Light-Cyan);
     border-radius: .5rem;
     width: .5rem;
     height: 1.3rem;
   }
+
+  .space {
+      width: 6%;
+    }
 
   button {
     position: absolute;
@@ -75,5 +82,43 @@ export const Container = styled.div`
 
   button:hover {
     filter: brightness(85%);
+  }
+
+  @media only screen and (min-width: 650px) {
+    h1 {
+      font-size: 1rem;
+    }
+
+    p {
+      max-width: 20rem;
+    }
+
+    div {
+      width: 45vw;
+    }
+
+    span {
+      justify-content: center;
+      transform: translateY(-1.5rem);
+    }
+
+    .space {
+      width: 3%;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    div {
+      width: 24rem;
+    }
+
+    span {
+      padding-top: 0rem;
+    }
+
+    .space {
+      width: .5rem;
+    }
+
   }
 `
