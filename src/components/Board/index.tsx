@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { Container } from "./style";
 import dice from '../../assets/icon-dice.svg'
+import Divider from '@mui/material/Divider';
 
 export function Board() {
 
@@ -23,10 +24,32 @@ export function Board() {
       <div>
         <h1>ADVICE # {advice.id}</h1>
         <p>{advice.advice}</p>
-        <span><hr className="horizontal" /><hr className="vertical" /><span className="space"></span><hr className="vertical" /><hr className="horizontal" /></span>
+
+        <Divider
+          orientation='horizontal'
+          style={{ transform: 'translateX(-80%)' }}
+        />
+        <Divider
+          orientation='vertical'
+          style={{ transform: 'rotate(90deg) translateY(-.8rem)' }}
+        />
+        <Divider
+          orientation='vertical'
+          style={{ transform: 'rotate(90deg) translateY(.8rem)' }}
+        />
+        <Divider
+          orientation='horizontal'
+          style={{ transform: 'translateX(80%)' }}
+        />
+
+
         <button onClick={fetchAdvice} >
           <img src={dice} alt="" />
         </button>
+      </div>
+      <div className="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
       </div>
     </Container>
   )

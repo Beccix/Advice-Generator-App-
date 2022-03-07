@@ -31,8 +31,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: purple;
+    background-color: var(--Dark-Grayish-blue);
     -webkit-font-smoothing: antialiased;
-    height: 100%;
+    height: 100vh;
   }
 `
