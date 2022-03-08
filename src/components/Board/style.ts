@@ -39,7 +39,7 @@ export const Container = styled.div`
     height: .1rem;
     width: 26%;
     position: absolute;
-    bottom: 36%;
+    bottom: 31%;
     background-color: white;
   }
 
@@ -51,6 +51,7 @@ export const Container = styled.div`
   }
 
   button {
+    box-shadow: 0px 0px 40px 1px var(--Neon-Green);
     position: absolute;
     border: var(--Neon-Green);
     border-radius: 100%;
@@ -91,7 +92,7 @@ export const Container = styled.div`
     height: .1rem;
     width: 16%;
     position: absolute;
-    bottom: 33%;
+    bottom: 28%;
     background-color: white;
   }
 
